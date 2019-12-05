@@ -48,7 +48,7 @@ def tinggiFollow(x):
     elif x>b: return 1
 
 #Fuzzification Engagement Rate
-#batas rendah: 0.5 - 1,5
+#batas rendah: 0.5 - 1.5
 def rendahEngage(x):
     a = 0.5
     b = 1.5
@@ -136,7 +136,6 @@ def bestGuy(x):
     for data in x:
         if c<20:
             dataMasuk = {
-                'No'     : c+1,
                 'Id' : data['record']
             }
             dataBaru.append(dataMasuk)
@@ -146,7 +145,7 @@ def bestGuy(x):
 #Write File
 def writeFile(x):
     with open('f:/SMT 5/AI/tupro 3/chosen.csv', 'w') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=['No','Id'])
+            writer = csv.DictWriter(csvfile, fieldnames=['Id'])
             writer.writeheader()
             for data in x:
                 writer.writerow(data)
